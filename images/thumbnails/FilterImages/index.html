@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Filter Image View Using jQuery| Webstuffshare.com</title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="demo.css" />
+		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('.menu li a').click(function() {
+					
+					
+					$('.menu li').removeClass('selected');
+					$(this).parent('li').addClass('selected');
+					
+					thisItem 	= $(this).attr('rel');
+					
+					if(thisItem != "all") {
+					
+						$('.item li[rel='+thisItem+']').stop()
+																.animate({'width' : '110px', 
+																			 'opacity' : 1, 
+																			 'marginRight' : '.5em', 
+																			 'marginLeft' : '.5em'
+																			});
+																			
+						$('.item li[rel!='+thisItem+']').stop()
+																.animate({'width' : 0, 
+																			 'opacity' : 0,
+																			 'marginRight' : 0, 
+																			 'marginLeft' : 0
+																			});
+					} else {
+						
+						$('.item li').stop()
+										.animate({'opacity' : 1, 
+													 'width' : '110px', 
+													 'marginRight' : '.5em', 
+													 'marginLeft' : '.5em'
+													});
+					}
+				})
+				
+				$('.item li img').animate({'opacity' : 0.5}).hover(function() {
+					$(this).animate({'opacity' : 1});
+				}, function() {
+					$(this).animate({'opacity' : 0.5});
+				});
+				
+			});
+			
+		</script>
+</head>
+<body>
+<div id="container">
+	<span class="title">Filter Image View Using jQuery</span>
+	
+	<ul class="menu">
+		<li class="selected"><a href="#" rel="all">All Tutorial</a></li>
+		<li><a href="#" rel="jquery">jQuery Tutorial</a></li>
+		<li><a href="#" rel="css">CSS Tutorial</a></li>
+		<li><a href="#" rel="psd">Free PSD</a></li>
+	</ul>
+	
+	<ul class="item">
+		<li rel="jquery"><a href="http://www.webstuffshare.com/2010/04/nice-menu-css-animation-jquery-animate/"><img src="images/button.jpg" /></a></li>
+		<li rel="jquery"><a href="http://www.webstuffshare.com/2010/04/10-random-jquery-snippet/"><img src="images/codesnippet.jpg" /></a></li>
+		<li rel="css"><a href="http://www.webstuffshare.com/2010/04/photoshop-effect-vs-css3-properties/"><img src="images/css.jpg" /></a></li>
+		<li rel="css"><a href="http://www.webstuffshare.com/2010/05/css3-music-player-menu/"><img src="images/css2.jpg" /></a></li>
+		<li rel="psd"><a href="http://www.webstuffshare.com/2010/03/stylize-your-own-checkboxes/"><img src="images/psd.jpg" /></a></li>
+		<li rel="jquery"><a href="http://www.webstuffshare.com/2010/04/create-groovershark-like-widget-slider/"><img src="images/groovershark.png" /></a></li>
+		<li rel="css"><a href="http://www.webstuffshare.com/2010/04/stylize-input-element-using-css3/"><img src="images/stylize.jpg" /></a></li>
+		<li rel="psd"><a href="http://www.webstuffshare.com/2010/04/free-psd-checkbox-replacement/"><img src="images/psd2.jpg" /></a></li>
+	</ul>
+	
+	<div class="cleaner"></div>
+	<span class="title"><a href="http://www.webstuffshare.com/2010/05/filter-image-view-using-jquery/">&laquo; Read The Tutorial</a></span>
+</div>
+</body>
