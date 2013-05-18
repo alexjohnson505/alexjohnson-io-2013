@@ -1,0 +1,2 @@
+var DUET = DUET || {};
+

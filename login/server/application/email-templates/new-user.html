@@ -1,0 +1,22 @@
+{include="header"}
+
+    {function="get_config('company.name')"} has created an online account for you to track your project's status.
+
+    <br>
+    <br>
+
+    You can access your account with the following information:
+
+    <br>
+    <br>
+
+    <strong>url:</strong> <a style="color:#4e79c6;" href={function="get_config('base_url')"}>{function="get_config('base_url')"}</a><br>
+    <strong>email:</strong> {$email}<br>
+    <strong>passsword:</strong> {$temporary_password}
+
+    <br>
+    <br>
+
+
+
+{include="footer"}

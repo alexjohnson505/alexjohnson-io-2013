@@ -1,0 +1,33 @@
+{include="header"}
+
+{if condition="isset($intro)"}
+<h3 style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; line-height: 1.1; color: #333; font-weight: bold; font-size: 27px; margin-top: 0; margin-right: 0; margin-bottom: 15px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+    {$intro}</h3>
+{/if}
+
+{if condition="isset($body)"}
+<p style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+    {$body}</p>
+{/if}
+
+<!-- Callout Panel -->
+
+{if condition="isset($callout)"}
+<p class="callout"
+   style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; font-size: 14px; line-height: 1.6; margin-top: 0; margin-right: 0; margin-bottom: 15px; margin-left: 0; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px; background-color: #ECF8FF;">
+
+    {if condition="isset($callout_text)"}
+    {$callout_text}
+    {/if}
+
+    {if condition="isset($callout_link)"}
+    <a href="#"
+       style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; color: #2BA6CB; font-weight: bold; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+        {$callout_link} »</a>
+    {/if}
+
+</p><!-- /Callout Panel -->
+{/if}
+
+
+{include="footer"}

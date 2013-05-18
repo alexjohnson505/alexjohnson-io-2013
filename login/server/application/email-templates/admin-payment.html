@@ -1,0 +1,17 @@
+{include="header"}
+
+
+
+    {$client_name} has submitted a payment
+    <br>
+    <br>
+    <strong>Invoice:</strong> #{$number}<br>
+    <strong>Payment amount:</strong> {function="get_config('currency_symbol')"}{$amount}
+    <br>
+    <br>
+
+
+
+
+
+{include="footer"}

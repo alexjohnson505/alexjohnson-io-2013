@@ -1,0 +1,14 @@
+{include="header"}
+
+    Files have been uploaded to {$project->name}
+    <br>
+    <br>
+
+    <ul>
+        {loop="files"}
+        <li><a href="{$base_url}#projects/{$project->id}/files/{$value.id}">{$value.name}</a></li>
+        {/loop}
+    </ul>
+
+
+{include="footer"}

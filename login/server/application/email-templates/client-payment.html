@@ -1,0 +1,11 @@
+{include="header"}
+
+    This email is being sent to confirm that you have made a payment online.
+    <br>
+    <br>
+    <strong>Invoice:</strong> #{$number}<br>
+    <strong>Payment amount:</strong> {function="get_config('currency_symbol')"}{$amount}
+    <br>
+    <br>
+
+{include="footer"}

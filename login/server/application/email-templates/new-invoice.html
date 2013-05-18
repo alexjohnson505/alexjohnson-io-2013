@@ -1,0 +1,18 @@
+{include="header"}
+
+    {function="get_config('company.name')"} has sent you an invoice for
+    {function="get_config('currency_symbol')"}{$total}
+
+    <br>
+    <br>
+
+
+    Please <a style="color:#4e79c6;" href={function="get_config('base_url')"}>log in</a> to view the details of this invoice or send
+    {function="get_config('company.name')"} your payment.
+
+    <br><br>
+    You can also copy and paste this link into your web browser:
+    {function="get_config('base_url')"}
+
+
+{include="footer"}
