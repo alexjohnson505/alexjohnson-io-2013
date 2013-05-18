@@ -591,9 +591,10 @@ DUET.TaskListView = function (data, project) {
 
     this.project = project;
 
-    if (DUET.userIsAdmin())
-        this.taskListItemsView = new DUET.TaskListItemsView(data, project);
-    else this.taskListItemsView = new DUET.TaskListItemsSimpleView(data, project.id);
+    // if (DUET.userIsAdmin())
+    //     this.taskListItemsView = new DUET.TaskListItemsView(data, project);
+    // else this.taskListItemsView = new DUET.TaskListItemsSimpleView(data, project.id);
+    this.taskListItemsView = new DUET.TaskListItemsView(data, project);
 
     this.taskListItemsView.addTo({$anchor:this.$element});
 };
@@ -655,9 +656,10 @@ DUET.TaskListView.prototype.redraw = function (collection, filterToApply) {
     this.taskListITemsView = false;
     //this.taskListItemsView = new DUET.TaskListItemsView(taskCollection, this.project);
 
-    if (DUET.userIsAdmin())
-        this.taskListItemsView = new DUET.TaskListItemsView(taskCollection, this.project);
-    else this.taskListItemsView = new DUET.TaskListItemsSimpleView(taskCollection, this.project.id);
+    // if (DUET.userIsAdmin())
+    //     this.taskListItemsView = new DUET.TaskListItemsView(taskCollection, this.project);
+    // else this.taskListItemsView = new DUET.TaskListItemsSimpleView(taskCollection, this.project.id);
+    this.taskListItemsView = new DUET.TaskListItemsView(taskCollection, this.project);
 
     this.taskListItemsView.addTo({$anchor:this.$element});
 
