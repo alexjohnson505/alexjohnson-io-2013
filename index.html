@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+	<script src="js/ga.js" async="" type="text/javascript"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	// REMEMBER TO ADD YOUR OWN GOOGLE ANALYTICS ID
+	window.__CF=window.__CF||{};window.__CF.AJS={"ga_key":{"ua":"YOUR_GA_ID_HERE","ga_bs":"2"}};
+	//]]>
+</script>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/template.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<script src="content.js"></script>
+<script type="text/javascript" src="js/jquery-v1.9.1.js"></script>
+<script src="js/mustache.js"></script>
+<!--
+Special thanks to Routie
+"Routie is a javascript hash routing library. It is designed for scenarios
+when push state is not an option (IE8 support, static/Github pages, Phonegap,
+simple sites, etc). It is very tiny (800 bytes gzipped), and should be able
+to handle all your routing needs. " -  projects.jga.me/routie/
+-->
+<script src="js/routie.min.js"></script>
+<script>
+	// Set up routes and their functions.
+	routie({
+		'': function() {
+			// ensure correct content is shown at home
+			$('.content').hide();
+			$('.previews').show();
+		},
+		'item1a': function() {
+			// Very basic content-change example
+			$('.previews').hide();
+			$('.content').show();
+		},
+		'post/:name': function(name) {
+			var output = Mustache.render("{{title}} <br /> {{description}}", content.evertrue_amp);
+
+			$('.previews').hide();
+			$('.content > .post').html(output);
+			$('.content').show();
+
+		},
+	});
+</script>
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+<!--
+Special thanks to:
+MIXITUP - A CSS3 and jQuery Filter & Sort Plugin
+
+Concept and development by Patrick Kunka
+Design by Jane Song
+
+MixItUp is free for non-commercial and commercial use.
+Copyright 2013 Patrick Kunka.
+
+http://mixitup.io
+-->
+<script type="text/javascript">
+	// INSTANTIATE MIXITUP
+	$(function(){
+		$('#Grid').mixitup();
+	});
+</script>
+
+<title>alexjohnson.io - Portfolio</title>
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'ADD_YOUR_GA_ID_HERE']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+	/* ]]> */
+</script>
+<style type="text/css">
+	a { color: #f74c31;}
+	.cf-hidden { display: none; }
+	.cf-invisible { visibility: hidden; }
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1><strong>alexjohnson.io</strong> personal portfolio</h1>
+
+		<p>ABC | Always Be Creating.</p>
+		<div class="previews">
+			<!-- FILTER CONTROLS -->
+			<div class="controls">
+				<h3>Select a Category</h3>
+				<ul>
+					<li class="filter active" data-filter="all">Show All</li>
+					<li class="filter" data-filter="category_1">Category 1</li>
+					<li class="filter" data-filter="category_2">Category 2</li>
+					<li class="filter" data-filter="category_3">Category 3</li>
+					<li class="filter" data-filter="category_3 category_1">Category 1 &amp; 3</li>
+				</ul>
+			</div>
+
+				<!-- SORT CONTROLS
+				<div class="controls">
+					<h3>Sort Controls</h3>
+					<ul>
+						<li class="sort active" data-sort="data-cat" data-order="desc">Descending</li>
+						<li class="sort" data-sort="data-cat" data-order="asc">Ascending</li>
+						<li class="sort" data-sort="default" data-order="desc">Default</li>
+					</ul>
+				</div>
+			-->
+
+			<hr>
+
+			<!-- GRID -->
+			<ul style="" id="Grid">
+				<li style="" class="mix category_1 mix_all" data-cat="1"><a href="#item1a">1</a></li>
+				<li style="" class="mix category_1 mix_all" data-cat="1"><a href="#post/item1b">1</a></li>
+				<li style="" class="mix category_2 mix_all" data-cat="2"><a href="#post/item2a">2</a></li>
+				<li style="" class="mix category_2 mix_all" data-cat="2">2</li>
+				<li style="" class="mix category_3 mix_all" data-cat="3">3</li>
+				<li style="" class="mix category_3 mix_all" data-cat="3">3</li>
+
+				<li class="gap"></li> <!-- "gap" elements fill in the gaps in justified grid -->
+			</ul>
+		</div>
+		<div class="content" style="display:none;">
+			<div class="post"></div>
+			<a href="#">Back to Home</a>
+		</div>
+	</div>
+</body></html>

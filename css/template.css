@@ -1,0 +1,134 @@
+/*
+* MIXITUP Boilerplate Template Stylesheet
+*/
+
+/* ------ DEFAULTS ------ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+
+table{
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+
+a{
+	text-decoration: none;
+}
+
+nav li{
+	list-style-type: none;
+	display: inline-block;
+}
+
+/* ------ BOILERPLATE TEMPLATE ------ */
+
+body{
+	font-family: 'Open Sans';
+}
+
+.wrapper{
+	margin: 50px auto 0 auto;
+	max-width: 640px;
+}
+
+h1{
+	margin-bottom: 30px;
+}
+
+h1 strong{
+	font-weight: 700;
+}
+
+h3{
+	margin-bottom: 20px;
+	font-weight: 600;
+}
+
+p{
+	width: 500px;
+	margin: 0 0 30px;
+	text-align: left;
+	line-height: 1.5;
+}
+
+.controls{
+	display: inline-block;
+	width: 180px;
+	margin: 0 0 30px;
+	vertical-align: top;
+}
+
+.controls li{
+	margin-left: 20px;
+	cursor: pointer;
+	list-style-type: square;
+}
+
+.controls li.active{
+	font-weight: 700;
+}
+
+hr{
+	margin: 0 0 30px;
+	height: 0;
+	border: 0 none;
+	border-top: 1px solid #eee;
+}
+
+#Grid{
+	width: 640px;
+	text-align: justify;
+	font-size: 0.1px;
+}
+
+#Grid:after{
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+#Grid .mix{
+	display: none;
+	opacity: 0;
+	width: 200px;
+	height: 200px;
+	vertical-align: top;
+	margin-bottom: 20px;
+	background: #ccc;
+	color: #fff;
+	
+	font-size: 30px;
+	text-align: center;
+	line-height: 200px;
+}
+
+#Grid .gap{
+	display: inline-block;
+	width: 200px;
+}
