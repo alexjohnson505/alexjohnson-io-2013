@@ -127,13 +127,6 @@ var content =
 		tags : "Java",
 		image : "",
 	},
-		"php-current" : {
-		title : "Tutorial: Using PHP and CSS to highlight current page",
-		description : "Here is an interesting little solution I came up with. When looking at a website navigation menu, what is the best way to change the CSS so that the current page is labeled? There is a million solutions. However, I am using this little PHP snippet to check the current pages file name, against the link name. In the isCurrent function, the method takes in a string(name of the link), compares it to the current page via the basename($_SERVER[PHP_SELF]) function. If true, the function returns 'current' as the class name, or 'link' for the non-current class name. Result: the CSS class names reflect the current page. Just add CSS styles for .current",
-		category : "programming",
-		tags : "PHP, CSS3, Tutorial",
-		image : "",
-	},
  		"tetris" : {
 		title : "Tetris in Scheme",
 		description : "Here is a funny little assignment from freshman year. Programming Tetris in Racket using DrRacket (dialect of scheme). A partner and I wrote this code as one of the final projects in an Introduction to Programming course. It is basic tetris . It has the blocks, row removal, rotation, templates, and way too many check-expects (requirements of the assignment). Right & Left to move the block, A & S to rotate. Sorry about the indentation below. To download the source file (.rkt) right mouse click, and save the following link: Download Tetris in DrRacket",
