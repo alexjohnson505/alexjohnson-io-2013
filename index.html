@@ -20,7 +20,7 @@
 <link href="css/fonts.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/template.css">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<script src="content.js"></script>
+<script src="content/content.js"></script>
 <script type="text/javascript" src="js/jquery-v1.9.1.js"></script>
 <script src="js/mustache.js"></script>
 <!--
@@ -40,13 +40,8 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			$('.content > .post').empty();
 			$('.previews').show();
 		},
-		'item1a': function() {
-			// Very basic content-change example
-			$('.previews').hide();
-			$('.content').show();
-		},
 		'post/:name': function(name) {
-			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/web/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
+			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/preview/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
 
 			// render post gallery when applicable
 			if (content[name].category == "photography" ||
