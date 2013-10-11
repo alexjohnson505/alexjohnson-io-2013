@@ -41,7 +41,7 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			$('.previews').show();
 		},
 		'post/:name': function(name) {
-			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/preview/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
+			var output = Mustache.render('<h2>{{title}}</h2><img src="images/preview/' + name + '.jpg"><hr /><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
 
 			// render post gallery when applicable
 			if (content[name].category == "photography" ||
@@ -120,9 +120,9 @@ http://mixitup.io
 				<ul class="filter">
 					<li class="filter active" data-filter="all">Show All</li>
 					<li class="filter" data-filter="web">Web Development</li>
-					<li class="filter" data-filter="design">Web Design</li>
 					<li class="filter" data-filter="programming">Programming</li>
 					<li class="filter" data-filter="photography">Photography</li>
+					<li class="filter" data-filter="design">Web Design</li>
 					<li class="filter" data-filter="graphic">Graphic Design</li>
 				</ul>
 			</div>
@@ -130,7 +130,7 @@ http://mixitup.io
 			<ul style="" id="Grid">
 				<li class="mix mix_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');"         data-cat="1"><a href="#post/evertrue-amp">EverTrue's Admin Management Portal</a></li>
 				<li class="mix mix_all web design graphic" style="background-image: url('images/thumbs/linkedin-grader.png');"         data-cat="1"><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/eventler.png');"         data-cat="1"><a href="#post/eventler.png">EverTrue's Eventler</a></li>
+				<li class="mix mix_all web" style="background-image: url('images/thumbs/eventler.png');"         data-cat="1"><a href="#post/eventler">EverTrue's Eventler</a></li>
 				<li class="mix mix_all web design" style="background-image: url('images/thumbs/fitbit-challenge.png');"         data-cat="1"><a href="#post/fitbit-challenge">EverTrue's FitBit Challenge</a></li>
 				<li class="mix mix_all design" style="background-image: url('images/thumbs/evertrue-email.png');"         data-cat="1"><a href="#post/evertrue-email">EverTrue E-mail Campaigns</a></li>
 				<li class="mix mix_all web design" style="background-image: url('images/thumbs/texture-report.png');"         data-cat="1"><a href="#post/texture-report">Texture Report.com</a></li>
