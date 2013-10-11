@@ -15,7 +15,7 @@
 
 var content =
 {
-	"evertrue_amp" : {
+	"evertrue-amp" : {
 		title : "EverTrue's Admin Management Portal",
 		description : "EverTrue is a mobile platform developer, working to strengthen alumni relationships through the intersection of mobile applications, institutional knowledge, and social media such as LinkedIn. As a web development co-op at EverTrue, I worked alongside their product lead to prepare their Admin Management Portal. The Admin Management Portal, now refered to as ___, is a self-service tool for clients and admins. Leveraging Backbone and a PHP/MySQL powered internal API we brought this single page javascript web app from being used internally, to a client-facing self-service tool by the end of the summer. I held responsibility over a variety of features, such as the landing pages, authentication aesthetics and UX, maintaining the bootstrap based style guide, investiagting bug reoorts from client services, responsive design, and mangement page for sugguested updates. Working alongside, and coordinating prodic development betwee iOS, Android, Backend, and Client Services probided to be a rewarding part of the job.",
 		category : "web",
