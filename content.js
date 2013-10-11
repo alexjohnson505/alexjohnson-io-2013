@@ -113,7 +113,7 @@ var content =
 		tags : "Graphic Design, Illustrator, Photoshop",
 		image : "[Gallery]",
 	},
-		"salem-state-web" : {
+		"salem-state" : {
 		title : "Salem State University Web Design",
 		description : "During Summer 2010 through Spring 2011 I was hired by the IT department of Salem State University to develop and work on their web team. My focus was to propose designs and improvement to a number of tools used by the faculty and students. I used CSS, jQuery, and PHP to create mock-up designs, with the goal of emulating the final product. Here are 2 of my designs I proposed to replace their current user portal and internal tools.",
 		category : "web",
@@ -134,7 +134,7 @@ var content =
 		tags : "PHP, CSS3, Tutorial",
 		image : "",
 	},
- 	"tetris" : {
+ 		"tetris" : {
 		title : "Tetris in Scheme",
 		description : "Here is a funny little assignment from freshman year. Programming Tetris in Racket using DrRacket (dialect of scheme). A partner and I wrote this code as one of the final projects in an Introduction to Programming course. It is basic tetris . It has the blocks, row removal, rotation, templates, and way too many check-expects (requirements of the assignment). Right & Left to move the block, A & S to rotate. Sorry about the indentation below. To download the source file (.rkt) right mouse click, and save the following link: Download Tetris in DrRacket",
 		category : "programming",

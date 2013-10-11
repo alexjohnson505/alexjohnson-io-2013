@@ -46,10 +46,16 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			$('.content').show();
 		},
 		'post/:name': function(name) {
-			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/web/texturereport_preview.jpg"><p>{{description}}</p>', content[name]);
+			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/web/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
+
+			// render post gallery when applicable
+			if (content[name].category == "photography" ||
+				content[name].category == "graphic") {
+				var gallery = Mustache.render('{{image}}{{description}}', content[name]);
+				var output = output + "<br />" + gallery;
+			}
 
 			$('.previews').hide();
-
 			$('.content > .post').html(output);
 			$('.content').show();
 
