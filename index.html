@@ -37,6 +37,7 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 		'': function() {
 			// ensure correct content is shown at home
 			$('.content').hide();
+			$('.content > .post').empty();
 			$('.previews').show();
 		},
 		'item1a': function() {
@@ -45,12 +46,17 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			$('.content').show();
 		},
 		'post/:name': function(name) {
-			var output = Mustache.render("{{title}} <br /> {{description}}", content.evertrue_amp);
-
+			var output = Mustache.render("{{title}} <br /> {{description}}", content[name]);
+			
 			$('.previews').hide();
 			$('.content > .post').html(output);
 			$('.content').show();
 
+			
+  			// for(var index in content) {
+  			// 	document.write(content[index].category);
+  			// }
+		
 		},
 	});
 </script>
@@ -107,34 +113,42 @@ http://mixitup.io
 				<h3>Select a Category</h3>
 				<ul>
 					<li class="filter active" data-filter="all">Show All</li>
-					<li class="filter" data-filter="category_1">Category 1</li>
-					<li class="filter" data-filter="category_2">Category 2</li>
-					<li class="filter" data-filter="category_3">Category 3</li>
-					<li class="filter" data-filter="category_3 category_1">Category 1 &amp; 3</li>
+					<li class="filter" data-filter="web">Web Development</li>
+					<li class="filter" data-filter="programming">Programming</li>
+					<li class="filter" data-filter="photography">Photography</li>
+					<li class="filter" data-filter="graphic">Graphic Design</li>
 				</ul>
 			</div>
-
-				<!-- SORT CONTROLS
-				<div class="controls">
-					<h3>Sort Controls</h3>
-					<ul>
-						<li class="sort active" data-sort="data-cat" data-order="desc">Descending</li>
-						<li class="sort" data-sort="data-cat" data-order="asc">Ascending</li>
-						<li class="sort" data-sort="default" data-order="desc">Default</li>
-					</ul>
-				</div>
-			-->
 
 			<hr>
 
 			<!-- GRID -->
 			<ul style="" id="Grid">
-				<li style="" class="mix category_1 mix_all" data-cat="1"><a href="#item1a">1</a></li>
-				<li style="" class="mix category_1 mix_all" data-cat="1"><a href="#post/item1b">1</a></li>
-				<li style="" class="mix category_2 mix_all" data-cat="2"><a href="#post/item2a">2</a></li>
-				<li style="" class="mix category_2 mix_all" data-cat="2">2</li>
-				<li style="" class="mix category_3 mix_all" data-cat="3">3</li>
-				<li style="" class="mix category_3 mix_all" data-cat="3">3</li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/evertrue_amp">EverTrue's Admin Management Portal</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/eventler">EverTrue's Eventler</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/fitbit-challenge">EverTrue's FitBit Challenge</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/evertrue-email">EverTrue E-mail Campaigns</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/texture-report">Texture Report.com</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/texture-channel">Texture Channel.com</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/ttc-training-videos">TA.XT Plus and Exponenet Training Videos</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/texturetechnologies">TextureTechnologies.com</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/quoth-the-raver">QuoththeRaver.com</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/clintvalentine">ClintValentine.com</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/firebrand-innovations">FirebrandInnovations.com</a></li>
+				<li class="mix mix_all graphic"     data-cat="1"><a href="#post/logos">Logo Designs: VideoConversation Design, NEU Transfer Club</a></li>
+				<li class="mix mix_all graphic"     data-cat="1"><a href="#post/print">Print Designs</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/salem-state-web">Salem State University Web Design</a></li>
+				<li class="mix mix_all programming" data-cat="1"><a href="#post/fmap">Iterating over an FMap | FMap <k,v> Red/Black Tree</k,v></a></li>
+				<li class="mix mix_all programming" data-cat="1"><a href="#post/php-current">Tutorial: Using PHP and CSS to highlight current page</a></li>
+				<li class="mix mix_all programming" data-cat="1"><a href="#post/tetris">Tetris in Scheme</a></li>
+				<li class="mix mix_all photography" data-cat="1"><a href="#post/fire">Fire Performance Photography</a></li>
+				<li class="mix mix_all photography" data-cat="1"><a href="#post/landscape">Landscape Photography</a></li>
+				<li class="mix mix_all photography" data-cat="1"><a href="#post/macro">Macro Photography</a></li>
+				<li class="mix mix_all programming" data-cat="1"><a href="#post/quadcopter">Quadcopter Project</a></li>
+				<li class="mix mix_all web"         data-cat="1"><a href="#post/quadcopter-docs">Quadcopter Documentation</a></li>
+				<li class="mix mix_all programming" data-cat="1"><a href="#post/b2q-associates">B2Q Associates.com</a></li>
+				<li class="mix mix_all photography" data-cat="1"><a href="#post/wheat-marketing-center">Wheat Marketing Center</a></li>
 
 				<li class="gap"></li> <!-- "gap" elements fill in the gaps in justified grid -->
 			</ul>
@@ -144,4 +158,13 @@ http://mixitup.io
 			<a href="#">Back to Home</a>
 		</div>
 	</div>
+	<script type="text/javascript">
+	// Render grid items
+	// $(document).ready(function(){
+	// 	var output = Mustache.render("{{title}} <br /> {{description}}", content.evertrue_amp);
+	// 		alert(output);
+	// })
+
+	//<li style="" class="mix category_1 mix_all" data-cat="1"><a href="#item1a">1</a></li>
+	</script>
 </body></html>
