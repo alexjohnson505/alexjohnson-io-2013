@@ -54,6 +54,7 @@ nav li{
 
 body {
 	font-family: 'Open Sans';
+	font-weight: 400;
 }
 .wrapper {
 	margin: 30px auto 0 auto;
