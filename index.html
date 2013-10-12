@@ -46,18 +46,14 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			// render post gallery when applicable
 			if (content[name].category == "photography" ||
 				content[name].category == "graphic") {
-				var gallery = Mustache.render('{{image}}{{description}}', content[name]);
+				var gallery = Mustache.render('GALLERY GOES HERE{{image}}{{description}}', content[name]);
 				var output = output + "<br />" + gallery;
 			}
 
 			$('.previews').hide();
 			$('.content > .post').html(output);
 			$('.content').show();
-
-			$('html, body').animate({
-			    scrollTop: $("#title").offset().top
-			}, 2000);
-
+			$('html, body').animate({scrollTop: '0px'}, 3200);
 
   			// for(var index in content) {
   			// 	document.write(content[index].category);
@@ -66,7 +62,6 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 		},
 	});
 </script>
-<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 <!--
 Special thanks to:
 MIXITUP - A CSS3 and jQuery Filter & Sort Plugin
@@ -79,6 +74,7 @@ Copyright 2013 Patrick Kunka.
 
 http://mixitup.io
 -->
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 <script type="text/javascript">
 	// INSTANTIATE MIXITUP
 	$(function(){
@@ -127,31 +123,31 @@ http://mixitup.io
 				</ul>
 			</div>
 			<!-- GRID -->
-			<ul style="" id="Grid">
-				<li class="mix mix_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');"         data-cat="1"><a href="#post/evertrue-amp">EverTrue's Admin Management Portal</a></li>
-				<li class="mix mix_all web design graphic" style="background-image: url('images/thumbs/linkedin-grader.png');"         data-cat="1"><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/eventler.png');"         data-cat="1"><a href="#post/eventler">EverTrue's Eventler</a></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/fitbit-challenge.png');"         data-cat="1"><a href="#post/fitbit-challenge">EverTrue's FitBit Challenge</a></li>
-				<li class="mix mix_all design" style="background-image: url('images/thumbs/evertrue-email.png');"         data-cat="1"><a href="#post/evertrue-email">EverTrue E-mail Campaigns</a></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/texture-report.png');"         data-cat="1"><a href="#post/texture-report">Texture Report.com</a></li>
-				<li class="mix mix_all web design programming" style="background-image: url('images/thumbs/texture-channel.png');"         data-cat="1"><a href="#post/texture-channel">Texture Channel.com</a></li>
-				<li class="mix mix_all graphic photography" style="background-image: url('images/thumbs/ttc-training-videos.png');"         data-cat="1"><a href="#post/ttc-training-videos">TA.XT Plus and Exponent Training Videos</a></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/texturetechnologies.png');"         data-cat="1"><a href="#post/texturetechnologies">TextureTechnologies.com</a></li>
-				<li class="mix mix_all design" style="background-image: url('images/thumbs/quoth-the-raver.png');"         data-cat="1"><a href="#post/quoth-the-raver">QuoththeRaver.com</a></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/clintvalentine.png');"         data-cat="1"><a href="#post/clintvalentine">ClintValentine.com</a></li>
-				<li class="mix mix_all design" style="background-image: url('images/thumbs/firebrand-innovations.png');"         data-cat="1"><a href="#post/firebrand-innovations.png">FirebrandInnovations.com</a></li>
-				<li class="mix mix_all graphic" style="background-image: url('images/thumbs/logos.png');"     data-cat="1"><a href="#post/logos">Logo Designs: VideoConversation Design, NEU Transfer Club</a></li>
-				<li class="mix mix_all graphic" style="background-image: url('images/thumbs/print.png');"     data-cat="1"><a href="#post/print">Print Designs</a></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/salem-state-web.png');"         data-cat="1"><a href="#post/salem-state-web">Salem State University Web Design</a></li>
-				<li class="mix mix_all programming" style="background-image: url('images/thumbs/fmap.png');" data-cat="1"><a href="#post/fmap">Iterating over an FMap | FMap <k,v> Red/Black Tree</k,v></a></li>
-				<li class="mix mix_all programming" style="background-image: url('images/thumbs/tetris.png');" data-cat="1"><a href="#post/tetris">Tetris in Scheme</a></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/fire.png');" data-cat="1"><a href="#post/fire">Fire Performance Photography</a></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/landscape.png');" data-cat="1"><a href="#post/landscape">Landscape Photography</a></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/macro.png');" data-cat="1"><a href="#post/macro">Macro Photography</a></li>
-				<li class="mix mix_all programming" style="background-image: url('images/thumbs/quadcopter.png');" data-cat="1"><a href="#post/quadcopter">Quadcopter Project</a></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/quadcopter-docs.png');"         data-cat="1"><a href="#post/quadcopter-docs">Quadcopter Documentation</a></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/b2q-associates.png');" data-cat="1"><a href="#post/b2q-associates">B2Q Associates.com</a></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/wheat-marketing.png');" data-cat="1"><a href="#post/wheat-marketing-center.png">Wheat Marketing Center</a></li>
+			<ul id="Grid">
+				<li class="mix mix_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');" data-cat="1"><span><a href="#post/evertrue-amp">EverTrue's Admin Management Portal</a></span></li>
+				<li class="mix mix_all web design graphic" style="background-image: url('images/thumbs/linkedin-grader.png');" data-cat="1"><span><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></span></li>
+				<li class="mix mix_all web" style="background-image: url('images/thumbs/eventler.png');" data-cat="1"><span><a href="#post/eventler">EverTrue's Eventler</a></span></li>
+				<li class="mix mix_all web design" style="background-image: url('images/thumbs/fitbit-challenge.png');" data-cat="1"><span><a href="#post/fitbit-challenge">EverTrue's FitBit Challenge</a></span></li>
+				<li class="mix mix_all design" style="background-image: url('images/thumbs/evertrue-email.png');"         data-cat="1"><span><a href="#post/evertrue-email">EverTrue E-mail Campaigns</a></span></li>
+				<li class="mix mix_all web design" style="background-image: url('images/thumbs/texture-report.png');"         data-cat="1"><span><a href="#post/texture-report">Texture Report.com</a></span></li>
+				<li class="mix mix_all web design programming" style="background-image: url('images/thumbs/texture-channel.png');"         data-cat="1"><span><a href="#post/texture-channel">Texture Channel.com</a></span></li>
+				<li class="mix mix_all graphic photography" style="background-image: url('images/thumbs/ttc-training-videos.png');"         data-cat="1"><span><a href="#post/ttc-training-videos">TA.XT Plus and Exponent Training Videos</a></span></li>
+				<li class="mix mix_all web" style="background-image: url('images/thumbs/texturetechnologies.png');"         data-cat="1"><span><a href="#post/texturetechnologies">TextureTechnologies.com</a></span></li>
+				<li class="mix mix_all design" style="background-image: url('images/thumbs/quoth-the-raver.png');"         data-cat="1"><span><a href="#post/quoth-the-raver">QuoththeRaver.com</a></span></li>
+				<li class="mix mix_all web design" style="background-image: url('images/thumbs/clintvalentine.png');"         data-cat="1"><span><a href="#post/clintvalentine">ClintValentine.com</a></span></li>
+				<li class="mix mix_all design" style="background-image: url('images/thumbs/firebrand-innovations.png');"         data-cat="1"><span><a href="#post/firebrand-innovations.png">FirebrandInnovations.com</a></span></li>
+				<li class="mix mix_all graphic" style="background-image: url('images/thumbs/logos.png');"     data-cat="1"><span><a href="#post/logos">Branding Design</a></span></li>
+				<li class="mix mix_all graphic" style="background-image: url('images/thumbs/print.png');"     data-cat="1"><span><a href="#post/print">Print Designs</a></span></li>
+				<li class="mix mix_all web design" style="background-image: url('images/thumbs/salem-state-web.png');"         data-cat="1"><span><a href="#post/salem-state-web">Salem State University Web Design</a></span></li>
+				<li class="mix mix_all programming" style="background-image: url('images/thumbs/fmap.png');" data-cat="1"><span><a href="#post/fmap">Iterating over an FMap | FMap <k,v> Red/Black Tree</k,v></a></span></li>
+				<li class="mix mix_all programming" style="background-image: url('images/thumbs/tetris.png');" data-cat="1"><span><a href="#post/tetris">Tetris in Scheme</a></span></li>
+				<li class="mix mix_all photography" style="background-image: url('images/thumbs/fire.png');" data-cat="1"><span><a href="#post/fire">Fire Performance Photography</a></span></li>
+				<li class="mix mix_all photography" style="background-image: url('images/thumbs/landscape.png');" data-cat="1"><span><a href="#post/landscape">Landscape Photography</a></span></li>
+				<li class="mix mix_all photography" style="background-image: url('images/thumbs/macro.png');" data-cat="1"><span><a href="#post/macro">Macro Photography</a></span></li>
+				<li class="mix mix_all programming" style="background-image: url('images/thumbs/quadcopter.png');" data-cat="1"><span><a href="#post/quadcopter">Quadcopter Project</a></span></li>
+				<li class="mix mix_all web" style="background-image: url('images/thumbs/quadcopter-docs.png');"         data-cat="1"><span><a href="#post/quadcopter-docs">Quadcopter Documentation</a></span></li>
+				<li class="mix mix_all web" style="background-image: url('images/thumbs/b2q-associates.png');" data-cat="1"><span><a href="#post/b2q-associates">B2Q Associates.com</a></span></li>
+				<li class="mix mix_all photography" style="background-image: url('images/thumbs/wheat-marketing.png');" data-cat="1"><span><a href="#post/wheat-marketing-center.png">Wheat Marketing Center</a></span></li>
 
 				<li class="gap"></li> <!-- "gap" elements fill in the gaps in justified grid -->
 			</ul>

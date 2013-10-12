@@ -130,6 +130,16 @@ ul.filter li {
 	text-align: center;
 	line-height: 1.4em;
 }
+#Grid span {
+	margin-top: 39%;
+	display: block;
+	background-color: #000;
+	opacity: .8;
+}
+#Grid a {
+	color: #fff;
+	font-weight: 200;
+}
 
 #Grid .gap{
 	display: inline-block;
