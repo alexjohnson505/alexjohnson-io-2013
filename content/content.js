@@ -1,10 +1,3 @@
-// A Post Contains all of:
-// - (Int) id
-// - (String) post-name
-// - (String) title
-// - (Array) tags
-// - (String/HTML) content
-
 // "" : {
 // 		title : "",
 // 		description : "",
@@ -24,7 +17,7 @@ var content =
 	},
 	"linkedin-grader" : {
 		title : "EverTrue's LinkedIn Grader",
-		description : "Expanding off of a hackathon project, I worked alongside EverTrue's head data specialist to prepare the LinkedIn Grader for a public launch. Working off of an existing set of API calls to LinkedIn's partner API, I worked to polish out the user experience, auth the user through LinkedIn account authentication, and publish/market the new web tool to generate more leads from potential clients.",
+		description : "Expanding off of a hackathon project, I worked alongside EverTrue's head data specialist to prepare the LinkedIn Grader for a public launch. Working off of an existing set of API calls to LinkedIn's partner API, I worked to build the user experience, auth the user through LinkedIn account authentication, and publish/market the new web tool to generate more leads from potential clients.",
 		category : "web",
 		tags : "Web Development, EverTrue, CSS3, HTML, Javascript, jQuery, AJAX, Hackathon, Bootstrap",
 		image : "",
@@ -65,7 +58,7 @@ var content =
 		image : "",
 	},
 		"ttc-training-videos" : {
-		title : "TA.XT Plus and Exponet Training Videos",
+		title : "TA.XT Plus and Exponent Training Videos",
 		description : "As part of an ongoing video training series, I have done all the filming, setup, editing, hardware purchases, and publishing of the Texture Technologies' training videos seen on texturechannel.com. These videos are part of a 50+ library of HD training videos, about the use of Texture Technologies' TA.XT2 Plus instruments and Exponent software, all of which are available to clients as a subscription service.",
 		category : "web",
 		tags : "Texture Technologies, Video, Premiere Pro, Tutorial",
@@ -184,47 +177,3 @@ var content =
 		image : "",
 	}
 }
-
-
-
-// 	// 	"markbuckler" : {
-// 	// 	title : "MarkBuckler.com",
-// 	// 	description : "Personal site for Mark Buckler: electrical engineer and founder of FirebrandInnocations",
-// 	// 	category : "web",
-// 	// 	tags : "Web Development, Javascript",
-// 	// 	image : "",
-// 	// },
-// 	// 	"" : {
-// 	// 	title : "alexjohnson.io",
-// 	// 	description : "Personal Portfolio Website",
-// 	// 	tags : "Web Development, Javascript",
-// 	// 	image : "",
-// 	// },
-
-// // Salem State images
-// // more branding content?
-
-// // name:
-// // -snap
-// // -inline
-// // -design
-// // -dev
-
-// // affiliated projects:
-// // -kelsey norwood
-// // -brett walfish
-// // -robofo
-
-// // tutorials:
-// // -How to create an Action photoshop
-// // -
-
-// // Favorite Android Apps:
-// // AirDroid
-// // Todo.txt
-// // Mint
-// // Dolphin Browser
-// // Easy Battery Saver
-// // GoSMS
-// // SpeedTest/Ping
-// // SleepTime

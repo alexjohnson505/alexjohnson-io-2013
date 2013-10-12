@@ -10,12 +10,18 @@
 	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
 
-	<script src="js/ga.js" async="" type="text/javascript"></script>
-	<script type="text/javascript">
-	//<![CDATA[
-	// REMEMBER TO ADD YOUR OWN GOOGLE ANALYTICS ID
-	window.__CF=window.__CF||{};window.__CF.AJS={"ga_key":{"ua":"UA-44813077-1","ga_bs":"2"}};
-	//]]>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
 <link href="css/fonts.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -42,7 +48,7 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			$('.previews').show();
 		},
 		'post/:name': function(name) {
-			var output = Mustache.render('<h2>{{title}}</h2><img src="images/preview/' + name + '.jpg"><hr /><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
+			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/preview/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
 
 			// render post gallery when applicable
 			if (content[name].category == "photography" ||
@@ -84,21 +90,6 @@ http://mixitup.io
 </script>
 
 <title>alexjohnson.io - Portfolio</title>
-<script type="text/javascript">
-	/* <![CDATA[ */
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-44813077-1']);
-	_gaq.push(['_trackPageview']);
-
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-
-	(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
-	/* ]]> */
-</script>
 <style type="text/css">
 	a { color: #f74c31;}
 	.cf-hidden { display: none; }
@@ -107,7 +98,7 @@ http://mixitup.io
 </head>
 <body>
 	<div class="wrapper">
-		<h1 class="right" id="title"><strong>alexjohnson.io</strong> personal portfolio</h1>
+		<h1 class="right" id="title" onclick="routie('')"><strong>alexjohnson.io</strong> personal portfolio</h1>
 
 		<h3 class="right">ABC | Always Be Creating.</h3>
 		<div class="previews">
@@ -123,6 +114,7 @@ http://mixitup.io
 					<li class="filter" data-filter="graphic">Graphic Design</li>
 				</ul>
 			</div>
+			<hr />
 			<!-- GRID -->
 			<ul id="Grid">
 				<li class="mix mix_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');" data-cat="1"><span><a href="#post/evertrue-amp">EverTrue's Management Portal</a></span></li>
@@ -142,7 +134,7 @@ http://mixitup.io
 				<li class="mix mix_all web design" style="background-image: url('images/thumbs/salem-state.png');"         data-cat="1"><span><a href="#post/salem-state">Salem State Web Design</a></span></li>
 				<li class="mix mix_all programming" style="background-image: url('images/thumbs/fmap.png');" data-cat="1"><span><a href="#post/fmap">Iterating over an FMap | FMap <k,v> Red/Black Tree</k,v></a></span></li>
 				<li class="mix mix_all programming" style="background-image: url('images/thumbs/tetris.png');" data-cat="1"><span><a href="#post/tetris">Tetris in Scheme</a></span></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/fire.png');" data-cat="1"><span><a href="#post/fire">Fire Performance Photography</a></span></li>
+				<li class="mix mix_all photography" style="background-image: url('images/thumbs/fire.png');" data-cat="1"><span><a href="#post/fire">Fire Photography</a></span></li>
 				<li class="mix mix_all photography" style="background-image: url('images/thumbs/landscape.png');" data-cat="1"><span><a href="#post/landscape">Landscape Photography</a></span></li>
 				<li class="mix mix_all photography" style="background-image: url('images/thumbs/macro.png');" data-cat="1"><span><a href="#post/macro">Macro Photography</a></span></li>
 				<li class="mix mix_all programming" style="background-image: url('images/thumbs/quadcopter.png');" data-cat="1"><span><a href="#post/quadcopter">Quadcopter Project</a></span></li>
@@ -156,7 +148,7 @@ http://mixitup.io
 		<div class="content" style="display:none;">
 			<div class="post"></div>
 			<hr />
-			<p><a href="#">Back to Home</a></p>
+			<p><a href="" onclick="routie('')">Back to Home</a></p>
 		</div>
 	</div>
 	<script type="text/javascript">
