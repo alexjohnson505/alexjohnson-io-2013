@@ -30,6 +30,12 @@ MixItUp is a light-weight but powerful jQuery plugin that provides beautiful ani
 Mustache is a logic-less template syntax. It can be used for HTML, config files, source code - anything. It works by expanding tags in a template using values provided in a hash or object.
 [Mustache.js on Github](https://github.com/janl/mustache.js)
 
+### [FancyBox2](http://fancyapps.com/fancybox/)
+
+fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages. 
+
+[FancyBox2 on Github](https://github.com/fancyapps/fancyBox)
+
 #Contributors:
 
 * __Alex Johnson__ [@alexjohnson505](https://github.com/alexjohnson505)

@@ -88,6 +88,13 @@ http://mixitup.io
 		$('#Grid').mixitup();
 	});
 </script>
+<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+</script>
 
 <title>alexjohnson.io - Portfolio</title>
 <style type="text/css">
@@ -117,6 +124,11 @@ http://mixitup.io
 			<hr />
 			<!-- GRID -->
 			<ul id="Grid">
+				<a href="large_1.jpg" class="fancybox" rel="gallery" title="Sample title 1"><img src="small_1.jpg" /></a>
+				<a href="large_2.jpg" class="fancybox" rel="gallery" title="Sample title 1"><img src="small_2.jpg" /></a>
+
+
+
 				<li class="mix mix_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');" data-cat="1"><span><a href="#post/evertrue-amp">EverTrue's Management Portal</a></span></li>
 				<li class="mix mix_all web design graphic" style="background-image: url('images/thumbs/linkedin-grader.png');" data-cat="1"><span><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></span></li>
 				<li class="mix mix_all web" style="background-image: url('images/thumbs/eventler.png');" data-cat="1"><span><a href="#post/eventler">EverTrue's Eventler</a></span></li>
