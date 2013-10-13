@@ -73,10 +73,10 @@ http://mixitup.io
 		<h1 class="right" id="title" onclick="routie('')"><strong>alexjohnson.io</strong> personal portfolio</h1>
 
 		<h3 class="right">ABC | Always Be Creating.</h3>
-		<div class="previews">
-			<hr />
-			<!-- FILTER CONTROLS -->
-			<div class="controls">
+		
+		<hr />
+		<!-- Filter Controls -->
+		<div class="controls">
 				<ul class="filter">
 					<li class="filter active" data-filter="show_all" onclick="routie('')">Show All</li>
 					<li class="filter" data-filter="web" onclick="routie('category/web')">Web Development</li>
@@ -85,10 +85,15 @@ http://mixitup.io
 					<li class="filter" data-filter="design" onclick="routie('category/web')">Web Design</li>
 					<li class="filter" data-filter="graphic" onclick="routie('category/design')">Graphic Design</li>
 				</ul>
-			</div>
-			<hr />
-			<!-- Thumbnails -->
-			<ul id="Grid">
+		</div>
+		<hr />
+
+		<!-- Post -->
+		<div class="post" style="display:none;"></div>
+		<hr />
+
+		<!-- Thumbnails -->
+		<ul id="Grid">
 				<li class="mix show_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');" data-cat="1"><span><a href="#post/evertrue-amp">EverTrue's Management Portal</a></span></li>
 				<li class="mix show_all web design graphic" style="background-image: url('images/thumbs/linkedin-grader.png');" data-cat="1"><span><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></span></li>
 				<li class="mix show_all web" style="background-image: url('images/thumbs/eventler.png');" data-cat="1"><span><a href="#post/eventler">EverTrue's Eventler</a></span></li>
@@ -154,13 +159,10 @@ http://mixitup.io
 				<li class="mix macro"><a href="images/gallery/macro-syringe.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-syringe.jpg" /></a></li>
 
 				<li class="gap"></li> <!-- "gap" elements fill in the gaps in justified grid -->
-			</ul>
-		</div>
-		<div class="content" style="display:none;">
-			<div class="post"></div>
-			<hr />
-			<p><a href="" onclick="routie('')">Back to Home</a></p>
-		</div>
+		</ul>
+
+		<p><a href="" onclick="routie('')">Back to Home</a></p>
+		
 	</div>
 	<!--
 Special thanks to Routie
@@ -174,30 +176,25 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 	// Set up routes and their functions.
 	routie({
 		'': function() {
-			// ensure correct content is shown at home
-			$('.content').hide();
-			$('.content > .post').empty();
-			$('.previews').show();
+			$('.post').empty().hide();
+			$('#Grid').show();
 		},
 		'category/:name': function(name) {
 			$('#Grid').mixitup('filter',name);
+			$('.post').hide().empty();
+			$('#Grid').show();
 		},
 		'gallery/:name': function(name) {
 			$('#Grid').mixitup('filter',name);
+			$('.post').hide().empty();
+			$('#Grid').show();
 		},
 		'post/:name': function(name) {
 			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/preview/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
 
-			// render post gallery when applicable
-			if (content[name].category == "photography" ||
-				content[name].category == "graphic") {
-				var gallery = Mustache.render('<ul class="grid">{{{gallery}}}</ul>', content[name]);
-			var output = output + "<br />" + gallery;
-		}
-
-		$('.previews').hide();
-		$('.content > .post').html(output);
-		$('.content').show();
+		$('#Grid').hide();
+		$('.post').html(output);
+		$('.post').show();
 		$('html, body').animate({
 			scrollTop: '0px'
 		}, 0);
