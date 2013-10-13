@@ -78,12 +78,12 @@ http://mixitup.io
 			<!-- FILTER CONTROLS -->
 			<div class="controls">
 				<ul class="filter">
-					<li class="filter active" data-filter="show_all">Show All</li>
-					<li class="filter" data-filter="web">Web Development</li>
-					<li class="filter" data-filter="programming">Programming</li>
-					<li class="filter" data-filter="photography">Photography</li>
-					<li class="filter" data-filter="design">Web Design</li>
-					<li class="filter" data-filter="graphic">Graphic Design</li>
+					<li class="filter active" data-filter="show_all" onclick="routie('')">Show All</li>
+					<li class="filter" data-filter="web" onclick="routie('category/web')">Web Development</li>
+					<li class="filter" data-filter="programming" onclick="routie('category/programming')">Programming</li>
+					<li class="filter" data-filter="photography" onclick="routie('category/photography')">Photography</li>
+					<li class="filter" data-filter="design" onclick="routie('category/web')">Web Design</li>
+					<li class="filter" data-filter="graphic" onclick="routie('category/design')">Graphic Design</li>
 				</ul>
 			</div>
 			<hr />
@@ -178,6 +178,9 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			$('.content').hide();
 			$('.content > .post').empty();
 			$('.previews').show();
+		},
+		'category/:name': function(name) {
+			$('#Grid').mixitup('filter',name);
 		},
 		'gallery/:name': function(name) {
 			$('#Grid').mixitup('filter',name);
