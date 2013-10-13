@@ -99,9 +99,9 @@ var content =
 		tags : "Graphic Design, Illustrator",
 		image : "[Gallery]",
  	},
-		"print" : {
-		title : "Print Designs",
-		description : "TTC Business Cards, TTC Print Ads",
+		"branding" : {
+		title : "Branding Design",
+		description : "",
 		category : "graphic",
 		tags : "Graphic Design, Illustrator, Photoshop",
 		image : "[Gallery]",
