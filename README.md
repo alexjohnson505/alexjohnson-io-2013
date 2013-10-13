@@ -2,6 +2,13 @@ alexjohnson.io - personal portfolio
 ==============
 A simple single page JS app, used to filter portfolio items by category and view details on the selected portfolio item.
 
+# TODO:
+
+404 page
+Mobile/Responsive 
+write: quadcopter project
+
+
 # Special Thanks
 Special thanks to:
 
@@ -35,6 +42,13 @@ Mustache is a logic-less template syntax. It can be used for HTML, config files,
 fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages. 
 
 [FancyBox2 on Github](https://github.com/fancyapps/fancyBox)
+
+# Image Resolutions:
+
+Thumbnails: 280x280
+Post Headers: 960 x 720
+Preview 4:3 images: 875 x [whatever]
+
 
 #Contributors:
 
