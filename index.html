@@ -173,28 +173,32 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 -->
 <script src="lib/routie.min.js"></script>
 <script>
+	function postToGrid(){
+			$('.post').empty().hide();
+			$('#Grid').show();
+	}
 	// Set up routes and their functions.
 	routie({
 		'': function() {
-			$('.post').empty().hide();
-			$('#Grid').show();
+			postToGrid();
 		},
 		'category/:name': function(name) {
 			$('#Grid').mixitup('filter',name);
-			$('.post').hide().empty();
-			$('#Grid').show();
+			postToGrid();
 		},
 		'gallery/:name': function(name) {
 			$('#Grid').mixitup('filter',name);
-			$('.post').hide().empty();
-			$('#Grid').show();
+			postToGrid();
 		},
 		'post/:name': function(name) {
-			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/preview/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
+			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/preview/' + 
+				         name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
 
 		$('#Grid').hide();
-		$('.post').html(output);
-		$('.post').show();
+		$('.post').html(output).slideDown("fast", function() {
+			console.log("done");
+		})
+
 		$('html, body').animate({
 			scrollTop: '0px'
 		}, 0);
