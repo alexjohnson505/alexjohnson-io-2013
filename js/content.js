@@ -92,19 +92,12 @@ var content =
 		tags : "Web Development, Wordpress, Web Design, Bootstrap, Javascript",
 		image : "",
 	},
-		"logos" : {
-		title : "Logo Designs: VideoConversation Design, NEU Transfer Club",
-		description : "",
-		category : "graphic",
-		tags : "Graphic Design, Illustrator",
-		image : "[Gallery]",
- 	},
 		"branding" : {
 		title : "Branding Design",
 		description : "",
 		category : "graphic",
 		tags : "Graphic Design, Illustrator, Photoshop",
-		image : "[Gallery]",
+		gallery : "[Gallery]",
 	},
 		"salem-state" : {
 		title : "Salem State University Web Design",
@@ -132,7 +125,7 @@ var content =
 		description : "",
 		category : "photography",
 		tags : "Photography, Photoshop",
-		image : "[gallery]",
+		gallery : "[gallery]",
 	},
 		"landscape" : {
 		title : "Landscape Photography",
@@ -146,7 +139,7 @@ var content =
 		description : "",
 		category : "photography",
 		tags : "Photography",
-		image : "[gallery]",
+		gallery : '',
 	},
 		"quadcopter" : {
 		title : "Quadcopter Project",

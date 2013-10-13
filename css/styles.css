@@ -55,6 +55,8 @@ nav li{
 body {
 	font-family: 'Open Sans';
 	font-weight: 400;
+	/* prevent 'scroll-bar jump' */
+	overflow-y: scroll;
 }
 .wrapper {
 	margin: 30px auto 0 auto;
@@ -67,7 +69,7 @@ h1 strong {
 	font-weight: 700;
 }
 h2 {
-	width: 750px;
+	width: 875px;
 	margin: 0 auto;
 }
 .post h2 {
@@ -85,13 +87,13 @@ p {
 	line-height: 1.5;
 }
 hr {
-	margin: 0 0 30px;
+	margin: 0 0 10px;
 	height: 0;
 	border: 0 none;
 	border-top: 1px solid #eee;
 }
 ul.filter {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 ul.filter li {
 	list-style-type: none;
@@ -119,7 +121,14 @@ ul.filter li {
 	display: inline-block;
 	width: 100%;
 }
-
+#Grid li {
+	display: inline-block;
+	opacity: 1;
+	width: 280px;
+	height: 280px;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
 #Grid .mix{
 	display: none;
 	opacity: 0;

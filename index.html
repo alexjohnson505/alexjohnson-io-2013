@@ -30,6 +30,139 @@
 <script type="text/javascript" src="lib/jquery-v1.9.1.js"></script>
 <script src="lib/mustache.js"></script>
 <!--
+Special thanks to:
+MIXITUP - A CSS3 and jQuery Filter & Sort Plugin
+
+Concept and development by Patrick Kunka
+Design by Jane Song
+
+MixItUp is free for non-commercial and commercial use.
+Copyright 2013 Patrick Kunka.
+
+http://mixitup.io
+-->
+<script type="text/javascript" src="lib/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+	// INSTANTIATE MIXITUP
+	$(function(){
+		$('#Grid').mixitup({
+			showOnLoad : 'show_all'
+		});
+	});
+</script>
+<link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="lib/fancybox/jquery.fancybox.pack.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.fancybox').fancybox({
+            padding : 0,
+            overlay : null,
+            openEffect  : 'elastic'
+        });
+    });
+</script>
+<title>alexjohnson.io - Portfolio</title>
+<style type="text/css">
+	a { color: #f74c31;}
+	.cf-hidden { display: none; }
+	.cf-invisible { visibility: hidden; }
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<h1 class="right" id="title" onclick="routie('')"><strong>alexjohnson.io</strong> personal portfolio</h1>
+
+		<h3 class="right">ABC | Always Be Creating.</h3>
+		<div class="previews">
+		<hr />
+			<!-- FILTER CONTROLS -->
+			<div class="controls">
+				<ul class="filter">
+					<li class="filter active" data-filter="show_all">Show All</li>
+					<li class="filter" data-filter="web">Web Development</li>
+					<li class="filter" data-filter="programming">Programming</li>
+					<li class="filter" data-filter="photography">Photography</li>
+					<li class="filter" data-filter="design">Web Design</li>
+					<li class="filter" data-filter="graphic">Graphic Design</li>
+				</ul>
+			</div>
+			<hr />
+			<!-- Thumbnails -->
+			<ul id="Grid">
+				<li class="mix show_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');" data-cat="1"><span><a href="#post/evertrue-amp">EverTrue's Management Portal</a></span></li>
+				<li class="mix show_all web design graphic" style="background-image: url('images/thumbs/linkedin-grader.png');" data-cat="1"><span><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></span></li>
+				<li class="mix show_all web" style="background-image: url('images/thumbs/eventler.png');" data-cat="1"><span><a href="#post/eventler">EverTrue's Eventler</a></span></li>
+				<li class="mix show_all web design" style="background-image: url('images/thumbs/fitbit-challenge.png');" data-cat="1"><span><a href="#post/fitbit-challenge">EverTrue's FitBit Challenge</a></span></li>
+				<li class="mix show_all design" style="background-image: url('images/thumbs/evertrue-email.png');"         data-cat="1"><span><a href="#post/evertrue-email">EverTrue E-mail Campaigns</a></span></li>
+				<li class="mix show_all web design" style="background-image: url('images/thumbs/texture-report.png');"         data-cat="1"><span><a href="#post/texture-report">Texture Report.com</a></span></li>
+				<li class="mix show_all web design programming" style="background-image: url('images/thumbs/texture-channel.png');"         data-cat="1"><span><a href="#post/texture-channel">Texture Channel.com</a></span></li>
+				<li class="mix show_all graphic photography" style="background-image: url('images/thumbs/ttc-training-videos.png');"         data-cat="1"><span><a href="#post/ttc-training-videos">TA.XT2  Training Videos</a></span></li>
+				<li class="mix show_all web" style="background-image: url('images/thumbs/texturetechnologies.png');"         data-cat="1"><span><a href="#post/texturetechnologies">TextureTechnologies.com</a></span></li>
+				<li class="mix show_all design" style="background-image: url('images/thumbs/quoth-the-raver.png');"         data-cat="1"><span><a href="#post/quoth-the-raver">QuoththeRaver.com</a></span></li>
+				<li class="mix show_all web design" style="background-image: url('images/thumbs/clintvalentine.png');"         data-cat="1"><span><a href="#post/clintvalentine">ClintValentine.com</a></span></li>
+				<li class="mix show_all design" style="background-image: url('images/thumbs/firebrand-innovations.png');"         data-cat="1"><span><a href="#post/firebrand-innovations">FirebrandInnovations.com</a></span></li>
+				<li class="mix show_all graphic" style="background-image: url('images/thumbs/branding.png');"     data-cat="1"><span><a href="#gallery/branding">Branding Design</a></span></li>
+				<li class="mix show_all web design" style="background-image: url('images/thumbs/salem-state.png');"         data-cat="1"><span><a href="#post/salem-state">Salem State Web Design</a></span></li>
+				<li class="mix show_all programming" style="background-image: url('images/thumbs/fmap.png');" data-cat="1"><span><a href="#post/fmap">Iterating over an FMap | FMap <k,v> Red/Black Tree</k,v></a></span></li>
+				<li class="mix show_all programming" style="background-image: url('images/thumbs/tetris.png');" data-cat="1"><span><a href="#post/tetris">Tetris in Scheme</a></span></li>
+				<li class="mix show_all photography" style="background-image: url('images/thumbs/fire.png');" data-cat="1"><span><a href="#gallery/fire">Fire Photography</a></span></li>
+				<li class="mix show_all photography" style="background-image: url('images/thumbs/landscape.png');" data-cat="1"><span><a href="#gallery/landscape">Landscape Photography</a></span></li>
+				<li class="mix show_all photography" style="background-image: url('images/thumbs/macro.png');" data-cat="1"><span><a href="#gallery/macro">Macro Photography</a></span></li>
+				<li class="mix show_all programming" style="background-image: url('images/thumbs/quadcopter.png');" data-cat="1"><span><a href="#post/quadcopter">Quadcopter Project</a></span></li>
+				<li class="mix show_all web" style="background-image: url('images/thumbs/quadcopter-docs.png');"         data-cat="1"><span><a href="#post/quadcopter-docs">Quadcopter Documentation</a></span></li>
+				<li class="mix show_all web" style="background-image: url('images/thumbs/b2q-associates.png');" data-cat="1"><span><a href="#post/b2q-associates">B2Q Associates.com</a></span></li>
+				<li class="mix show_all photography" style="background-image: url('images/thumbs/wheat-marketing.png');" data-cat="1"><span><a href="#post/wheat-marketing-center">Wheat Marketing Center</a></span></li>
+
+				<li class="mix landscape"><a href="images/gallery/landscape-etna.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-etna.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-etna-2.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-etna-2.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-favignana.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-favignana.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-naxos.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-naxos.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-naxos-2.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-naxos-2.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-nevada.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-nevada.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-renfe.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-renfe.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-santorini.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-santorini.jpg" /></a></li>
+				<li class="mix landscape"><a href="images/gallery/landscape-waterfall.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-waterfall.jpg" /></a></li>
+
+				<li class="mix branding"><a href="images/gallery/branding-ttc-banner-better.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-banner-better.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/branding-ttc-channel-flier.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-channel-flier.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/branding-ttc-our-knowledge.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-our-knowledge.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/branding-ttc-print-cifst.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-print-cifst.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/branding-ttc-crunch.jpg" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-crunch.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/branding-ttc-texture-analysis.jpg" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-texture-analysis.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/branding-ttc-world-leaders.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-world-leaders.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/logo-firebrand.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/logo-firebrand.png" /></a></li>
+				<li class="mix branding"><a href="images/gallery/logo-texture-technologies.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/logo-texture-technologies.jpg" /></a></li>
+				<li class="mix branding"><a href="images/gallery/logo-video-conversations.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/logo-video-conversations.png" /></a></li>
+
+				<li class="mix fire"><a href="images/gallery/fire-beaver.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-beaver.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-sword.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-sword.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-drew.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-drew.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-fan.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-fan-2.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan-2.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-fan-3.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan-3.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-fan-4.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan-4.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-mushroom.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-mushroom.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-poi.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-poi.jpg" /></a></li>
+				<li class="mix fire"><a href="images/gallery/fire-trevor.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-trevor.jpg" /></a></li>
+
+				<li class="mix macro"><a href="images/gallery/macro-bread.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-bread.jpg" /></a></li>
+				<li class="mix macro"><a href="images/gallery/macro-cheeto.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-cheeto.jpg" /></a></li>
+				<li class="mix macro"><a href="images/gallery/macro-gel.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-gel.jpg" /></a></li>
+				<li class="mix macro"><a href="images/gallery/macro-pepper.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-pepper.jpg" /></a></li>
+				<li class="mix macro"><a href="images/gallery/macro-pill.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-pill.jpg" /></a></li>
+				<li class="mix macro"><a href="images/gallery/macro-pill-2.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-pill-2.jpg" /></a></li>
+				<li class="mix macro"><a href="images/gallery/macro-syringe.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-syringe.jpg" /></a></li>
+
+				<li class="gap"></li> <!-- "gap" elements fill in the gaps in justified grid -->
+			</ul>
+		</div>
+		<div class="content" style="display:none;">
+			<div class="post"></div>
+			<hr />
+			<p><a href="" onclick="routie('')">Back to Home</a></p>
+		</div>
+	</div>
+	<!--
 Special thanks to Routie
 "Routie is a javascript hash routing library. It is designed for scenarios
 when push state is not an option (IE8 support, static/Github pages, Phonegap,
@@ -46,171 +179,26 @@ to handle all your routing needs. " -  projects.jga.me/routie/
 			$('.content > .post').empty();
 			$('.previews').show();
 		},
+		'gallery/:name': function(name) {
+			$('#Grid').mixitup('filter',name);
+		},
 		'post/:name': function(name) {
 			var output = Mustache.render('<h2>{{title}}</h2><hr /><img src="images/preview/' + name + '.jpg"><p>{{description}}</p><p>Tags: {{tags}}</p>', content[name]);
 
 			// render post gallery when applicable
 			if (content[name].category == "photography" ||
 				content[name].category == "graphic") {
-				var gallery = Mustache.render('GALLERY GOES HERE{{image}}{{description}}', content[name]);
+				var gallery = Mustache.render('<ul class="grid">{{{gallery}}}</ul>', content[name]);
 				var output = output + "<br />" + gallery;
 			}
 
 			$('.previews').hide();
 			$('.content > .post').html(output);
 			$('.content').show();
-			$('html, body').animate({scrollTop: '0px'}, 0);
-
-  			// for(var index in content) {
-  			// 	document.write(content[index].category);
-  			// }
-
+			$('html, body').animate({
+				scrollTop: '0px'
+			}, 0);
 		},
 	});
 </script>
-<!--
-Special thanks to:
-MIXITUP - A CSS3 and jQuery Filter & Sort Plugin
-
-Concept and development by Patrick Kunka
-Design by Jane Song
-
-MixItUp is free for non-commercial and commercial use.
-Copyright 2013 Patrick Kunka.
-
-http://mixitup.io
--->
-<script type="text/javascript" src="lib/jquery.mixitup.min.js"></script>
-<script type="text/javascript">
-	// INSTANTIATE MIXITUP
-	$(function(){
-		$('#Grid').mixitup();
-	});
-</script>
-<link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="lib/fancybox/jquery.fancybox.pack.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.fancybox').fancybox({
-            padding : 0,
-            overlay : null,
-            openEffect  : 'elastic'
-        });
-    });
-</script>
-
-<title>alexjohnson.io - Portfolio</title>
-<style type="text/css">
-	a { color: #f74c31;}
-	.cf-hidden { display: none; }
-	.cf-invisible { visibility: hidden; }
-</style>
-</head>
-<body>
-	<div class="wrapper">
-		<h1 class="right" id="title" onclick="routie('')"><strong>alexjohnson.io</strong> personal portfolio</h1>
-
-		<h3 class="right">ABC | Always Be Creating.</h3>
-		<div class="previews">
-			<!-- FILTER CONTROLS -->
-			<div class="controls">
-				<h3>Select a Category</h3>
-				<ul class="filter">
-					<li class="filter active" data-filter="all">Show All</li>
-					<li class="filter" data-filter="web">Web Development</li>
-					<li class="filter" data-filter="programming">Programming</li>
-					<li class="filter" data-filter="photography">Photography</li>
-					<li class="filter" data-filter="design">Web Design</li>
-					<li class="filter" data-filter="graphic">Graphic Design</li>
-				</ul>
-			</div>
-			<hr />
-			<!-- GRID -->
-			<ul id="Grid">
-
-
-<li class="mix"><a href="images/gallery/landscape-etna.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-etna.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-etna-2.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-etna-2.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-favignana.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-favignana.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-naxos.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-naxos.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-naxos-2.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-naxos-2.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-nevada.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-nevada.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-renfe.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-renfe.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-santorini.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-santorini.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/landscape-waterfall.jpg" class="fancybox" rel="landscape" title=""><img src="images/thumbs/landscape-waterfall.jpg" /></a></li>
-
-<li class="mix"><a href="images/gallery/branding-ttc-banner-better.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-banner-better.png" /></a></li>
-<li class="mix"><a href="images/gallery/branding-ttc-channel-flier.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-channel-flier.png" /></a></li>
-<li class="mix"><a href="images/gallery/branding-ttc-our-knowledge.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-our-knowledge.png" /></a></li>
-<li class="mix"><a href="images/gallery/branding-ttc-print-cifst.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-print-cifst.png" /></a></li>
-<li class="mix"><a href="images/gallery/branding-ttc-crunch.jpg" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-crunch.png" /></a></li>
-<li class="mix"><a href="images/gallery/branding-ttc-texture-analysis.jpg" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-texture-analysis.png" /></a></li>
-<li class="mix"><a href="images/gallery/branding-ttc-world-leaders.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/branding-ttc-world-leaders.png" /></a></li>
-<li class="mix"><a href="images/gallery/logo-firebrand.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/logo-firebrand.png" /></a></li>
-<li class="mix"><a href="images/gallery/logo-texture-technologies.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/logo-texture-technologies.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/logo-video-conversations.png" class="fancybox" rel="branding" title=""><img src="images/thumbs/logo-video-conversations.png" /></a></li>
-
-<li class="mix"><a href="images/gallery/macro-bread.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-bread.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/macro-cheeto.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-cheeto.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/macro-gel.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-gel.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/macro-pepper.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-pepper.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/macro-pill.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-pill.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/macro-pill-2.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-pill-2.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/macro-syringe.jpg" class="fancybox" rel="macro" title="Texture Technologies Macro Photography"><img src="images/thumbs/macro-syringe.jpg" /></a></li>
-
-<li class="mix"><a href="images/gallery/fire-beaver.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-beaver.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-sword.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-sword.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-drew.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-drew.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-fan.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-fan-2.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan-2.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-fan-3.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan-3.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-fan-4.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-fan-4.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-mushroom.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-mushroom.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-poi.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-poi.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-sword.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-sword.jpg" /></a></li>
-<li class="mix"><a href="images/gallery/fire-trevor.jpg" class="fancybox" rel="fire" title="Wildfire 2013"><img src="images/thumbs/fire-trevor.jpg" /></a></li>
-
-
-				<li class="mix mix_all web programming design" style="background-image: url('images/thumbs/evertrue-amp.png');" data-cat="1"><span><a href="#post/evertrue-amp">EverTrue's Management Portal</a></span></li>
-				<li class="mix mix_all web design graphic" style="background-image: url('images/thumbs/linkedin-grader.png');" data-cat="1"><span><a href="#post/linkedin-grader">EverTrue's LinkedIn Grader</a></span></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/eventler.png');" data-cat="1"><span><a href="#post/eventler">EverTrue's Eventler</a></span></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/fitbit-challenge.png');" data-cat="1"><span><a href="#post/fitbit-challenge">EverTrue's FitBit Challenge</a></span></li>
-				<li class="mix mix_all design" style="background-image: url('images/thumbs/evertrue-email.png');"         data-cat="1"><span><a href="#post/evertrue-email">EverTrue E-mail Campaigns</a></span></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/texture-report.png');"         data-cat="1"><span><a href="#post/texture-report">Texture Report.com</a></span></li>
-				<li class="mix mix_all web design programming" style="background-image: url('images/thumbs/texture-channel.png');"         data-cat="1"><span><a href="#post/texture-channel">Texture Channel.com</a></span></li>
-				<li class="mix mix_all graphic photography" style="background-image: url('images/thumbs/ttc-training-videos.png');"         data-cat="1"><span><a href="#post/ttc-training-videos">TA.XT2  Training Videos</a></span></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/texturetechnologies.png');"         data-cat="1"><span><a href="#post/texturetechnologies">TextureTechnologies.com</a></span></li>
-				<li class="mix mix_all design" style="background-image: url('images/thumbs/quoth-the-raver.png');"         data-cat="1"><span><a href="#post/quoth-the-raver">QuoththeRaver.com</a></span></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/clintvalentine.png');"         data-cat="1"><span><a href="#post/clintvalentine">ClintValentine.com</a></span></li>
-				<li class="mix mix_all design" style="background-image: url('images/thumbs/firebrand-innovations.png');"         data-cat="1"><span><a href="#post/firebrand-innovations">FirebrandInnovations.com</a></span></li>
-				<li class="mix mix_all graphic" style="background-image: url('images/thumbs/branding.png');"     data-cat="1"><span><a href="#post/branding">Branding Design</a></span></li>
-				<li class="mix mix_all web design" style="background-image: url('images/thumbs/salem-state.png');"         data-cat="1"><span><a href="#post/salem-state">Salem State Web Design</a></span></li>
-				<li class="mix mix_all programming" style="background-image: url('images/thumbs/fmap.png');" data-cat="1"><span><a href="#post/fmap">Iterating over an FMap | FMap <k,v> Red/Black Tree</k,v></a></span></li>
-				<li class="mix mix_all programming" style="background-image: url('images/thumbs/tetris.png');" data-cat="1"><span><a href="#post/tetris">Tetris in Scheme</a></span></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/fire.png');" data-cat="1"><span><a href="#post/fire">Fire Photography</a></span></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/landscape.png');" data-cat="1"><span><a href="#post/landscape">Landscape Photography</a></span></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/macro.png');" data-cat="1"><span><a href="#post/macro">Macro Photography</a></span></li>
-				<li class="mix mix_all programming" style="background-image: url('images/thumbs/quadcopter.png');" data-cat="1"><span><a href="#post/quadcopter">Quadcopter Project</a></span></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/quadcopter-docs.png');"         data-cat="1"><span><a href="#post/quadcopter-docs">Quadcopter Documentation</a></span></li>
-				<li class="mix mix_all web" style="background-image: url('images/thumbs/b2q-associates.png');" data-cat="1"><span><a href="#post/b2q-associates">B2Q Associates.com</a></span></li>
-				<li class="mix mix_all photography" style="background-image: url('images/thumbs/wheat-marketing.png');" data-cat="1"><span><a href="#post/wheat-marketing-center">Wheat Marketing Center</a></span></li>
-
-				<li class="gap"></li> <!-- "gap" elements fill in the gaps in justified grid -->
-			</ul>
-		</div>
-		<div class="content" style="display:none;">
-			<div class="post"></div>
-			<hr />
-			<p><a href="" onclick="routie('')">Back to Home</a></p>
-		</div>
-	</div>
-	<script type="text/javascript">
-	// Render grid items
-	// $(document).ready(function(){
-	// 	var output = Mustache.render("{{title}} <br /> {{description}}", content.evertrue_amp);
-	// 		alert(output);
-	// })
-
-	//<li style="" class="mix category_1 mix_all" data-cat="1"><a href="#item1a">1</a></li>
-	</script>
 </body></html>

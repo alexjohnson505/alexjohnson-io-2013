@@ -7,6 +7,12 @@ A simple single page JS app, used to filter portfolio items by category and view
 404 page
 Mobile/Responsive 
 write: quadcopter project
+handle inbound URLs
+clear URL upon category change
+breadcrumb
+better image title/desc
+load posts inline
+
 
 
 # Special Thanks
