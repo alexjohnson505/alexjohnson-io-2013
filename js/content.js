@@ -115,14 +115,14 @@ var content =
 	},
 		"fmap" : {
 		title : "Iterating over an FMap | FMap <K,V> Red/Black Tree",
-		description : 'A programming challenge: Design the data class and Iterator that handles iterating over a parameterized FMap. FMap is an immutable abstract data type with parameterized values that represent keys of type K to values of type V. In addition, design FMapIterator which implements Iterator and iterates over the keys of a given FMap. To download the source file (.java) right mouse click, and save the following link: <a href="/files/FMap.java">Download Fmap and Iterator source file</a>',
+		description : 'A programming challenge: Design the data class and Iterator that handles iterating over a parameterized FMap. FMap is an immutable abstract data type with parameterized values that represent keys of type K to values of type V. In addition, design FMapIterator which implements Iterator and iterates over the keys of a given FMap. To download the source file (.java) right mouse click, and save the following link: <a href="download/FMap.java">Download Fmap and Iterator source file</a>',
 		category : "programming",
 		tags : "Java",
 		image : "",
 	},
  		"tetris" : {
 		title : "Tetris in Scheme",
-		description : 'Here is a fun little assignment from freshman year. Programming Tetris in Racket using DrRacket (dialect of scheme). A partner and I wrote this code as one of the final projects in an Introduction to Programming course. It is basic tetris . It has the blocks, row removal, rotation, templates, and a plethora of tests. Right & Left to move the block, A & S to rotate. To download the source file (.rkt) right mouse click, and save the following link: <a href="tetris_in_drracket_scheme.rkt">Download Tetris in DrRacket</a>',
+		description : 'Here is a fun little assignment from freshman year. Programming Tetris in Racket using DrRacket (dialect of scheme). A partner and I wrote this code as one of the final projects in an Introduction to Programming course. It is basic tetris . It has the blocks, row removal, rotation, templates, and a plethora of tests. Right & Left to move the block, A & S to rotate. To download the source file (.rkt) right mouse click, and save the following link: <a href="download/tetris_in_drracket_scheme.rkt">Download Tetris in DrRacket</a>',
 		category : "programming",
 		tags : "Scheme",
 		image : "",
