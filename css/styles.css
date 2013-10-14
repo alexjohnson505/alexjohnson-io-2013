@@ -86,6 +86,10 @@ p {
 	text-align: left;
 	line-height: 1.5;
 }
+p i {
+	display: inline-block;
+	margin-bottom: 10px;
+}
 hr {
 	margin: 0 0 10px;
 	height: 0;
