@@ -4,7 +4,9 @@
 // 		tags : "",
 // 		image : "",
 // 	}
-
+function postTemplate (name){
+	return '<hr/><h2>{{title}}</h2><hr /><img src="images/preview/' + name + '.jpg"><p>{{{description}}}</p><p>Tags: {{tags}}</p><p><a href="javascript:$.fancybox.close();">Close</a></p>';
+}
 
 var content =
 {
