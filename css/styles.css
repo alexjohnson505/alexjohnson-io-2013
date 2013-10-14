@@ -72,7 +72,7 @@ h2 {
 	width: 875px;
 	margin: 0 auto;
 }
-.post h2 {
+#post h2 {
 	text-align: center;
 }
 h3 {
@@ -80,7 +80,7 @@ h3 {
 	font-weight: 600;
 }
 p {
-	width: 750px;
+	max-width: 750px;
 	margin: 0 auto 20px;
 	font-size: 18px;
 	text-align: left;
@@ -110,7 +110,10 @@ ul.filter li {
 	-webkit-box-shadow: 1px 1px 0px #333;
 	color: #fff;
 }
-#Grid{
+#post {
+	width: 875;
+}
+#Grid {
 	width: 875px;
 	text-align: justify;
 	font-size: 0.1px;
@@ -144,7 +147,8 @@ ul.filter li {
 	line-height: 1.4em;
 }
 #Grid span {
-	margin-top: 39%;
+	padding: 7px;
+	margin-top: 20px;
 	display: block;
 	background-color: #000;
 	opacity: .8;
@@ -152,6 +156,8 @@ ul.filter li {
 #Grid a {
 	color: #fff;
 	font-weight: 200;
+	display: inline-block;
+	height: 280px;
 }
 
 #Grid .gap{
@@ -161,4 +167,13 @@ ul.filter li {
 .breadcrumbs {
 	margin-bottom: 10px;
 	font-size: 14px;
+}
+a {
+	color: #f74c31;
+}
+.cf-hidden { 
+	display: none; 
+}
+.cf-invisible {
+	visibility: hidden; 
 }
