@@ -11,6 +11,20 @@ breadcrumb
 better image title/desc
 load posts inline
 
+# Bugs:
+
+Graphic Design: Back button row off
+Home page has a back button
+low res panoramas
+pages w.o tags still say tags
+404 page
+#post/idontexist
+
+tags -> categories
+clear URL when back to category
+can go back while in lightbix
+
+
 # Special Thanks
 Special thanks to:
 
