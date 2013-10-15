@@ -5,25 +5,17 @@ A simple single page JS app, used to filter portfolio items by category and view
 # TODO:
 
 404 page
-Mobile/Responsive 
-write: quadcopter project
-breadcrumb
-better image title/desc
-load posts inline
+Mobile Support via Responsive
+Navigation Breadcrumb
+Titles for Images
+Make tags into category searches
 
 # Bugs:
 
-Graphic Design: Back button row off
-Home page has a back button
-low res panoramas
-pages w.o tags still say tags
-404 page
-#post/idontexist
-
-tags -> categories
-clear URL when back to category
-can go back while in lightbix
-
+Can 'Back Button' can back out of Lightbox
+Low Resolution Panoramas
+#post/idontexit forces lightbox
+post URL not clearing when returning to category
 
 # Special Thanks
 Special thanks to:
@@ -55,16 +47,15 @@ Mustache is a logic-less template syntax. It can be used for HTML, config files,
 
 ### [FancyBox2](http://fancyapps.com/fancybox/)
 
-fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages. 
+fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.
 
 [FancyBox2 on Github](https://github.com/fancyapps/fancyBox)
 
 # Image Resolutions:
 
-Thumbnails: 280x280
-Post Headers: 960 x 720
-Preview 4:3 images: 875 x [whatever]
-
+- Thumbnails: 280x280
+- Post Headers: 960 x 720
+- Preview 4:3 images: 875 x [whatever]
 
 #Contributors:
 

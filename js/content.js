@@ -89,7 +89,7 @@ var content =
 	},
 		"firebrand-innovations" : {
 		title : "FirebrandInnovations.com",
-		description : "FirebrandInnovations.com is a company flier site for Firebrand Innovations  - a growing intellectual property development startup. Future progress for Firebrand Innovations include developments on their video conferencing technologies. While the website is currently a skeleton site and a placeholder, we're waiting on some large developments to finish unfolding before going public.",
+		description : "FirebrandInnovations.com is a company flier site for Firebrand Innovations  - a growing intellectual property development startup. Future progress for Firebrand Innovations includes developments on their video conferencing technologies. While the website is currently a skeleton site and a placeholder, we're waiting on some large developments to finish unfolding before going public.",
 		category : "web",
 		tags : "Web Development, Wordpress, Web Design, Bootstrap, Javascript",
 	},
@@ -141,14 +141,14 @@ var content =
 	},
 		"quadcopter" : {
 		title : "Quadcopter Project",
-		summary: "Our goal was to develop an autonomous Quadcopter, capable to navigating in 3-dimensional space, ultimately leading to opportunities in mapping and aerial photgraphy.",
-		description : "A quadcopter, also known as a quadrotor helicopter, is an instrument lifted and propelled by four rotors. Compared to traditional 2-propellor helipcopter solutions, quadcopters have become increasingly popular due to their stability and maneuverability. Nate Lilienthal, Dan Calacci, and I worked together to purchase and assembly the structure, as well as research parts, experiment with new math concepts such as kalman filters and quaternions, play with ruby and C++ on Arduino. The project is still a work in progress, though capable of flight, our 'in-development' stabalization algorithm needs more work before we attempt higher altitudes.",
+		summary: "Our goal was to develop an autonomous Quadcopter, capable of navigating in 3-dimensional space, ultimately leading to opportunities in mapping and aerial photography.",
+		description : "A quadcopter, also known as a quadrotor helicopter, is an instrument lifted and propelled by four rotors. Compared to traditional 2-propellor helipcopter solutions, quadcopters have become increasingly popular due to their stability and maneuverability. Nate Lilienthal, Dan Calacci, and I worked together to research parts, then purchase and assemble the structure. In addition, we experimented with new math concepts such as kalman filters and quaternions, and played with ruby and C++ on Arduino. The project is still a work in progress;  though capable of flight, our 'in-development' stabilization algorithm needs more work before we attempt higher altitudes ",
 		category : "programming",
 		tags : "Ruby, C++, Latex",
 	},
 		"quadcopter-docs" : {
 		title : "Quadcopter Documentation",
-		description : "While developing our Quadcopter, my friend Nathan and I were surprised by the lack of official documentation on the assembly of quadcopters. This resulted in reading the technical documentation for various parts, in addition to trial and error. We made a goal, that not only would be build a quadcopter from 'scratch', but that we would properly document our experience - in everything from our hardware and our code, to our successes and failures. The goal was that we could contribute to the online community, and save future quadcopter developers from the expending the amount of time and effort we experienced. While not finalized yet, the quadcopter docs are currently running Ruby and Sinatra to parse HTML and Latex from markdown files and render as a website. These technologies will provide a solid framework and collaboration through Github.",
+		description : "While developing our Quadcopter, my friend Nathan and I were surprised by the lack of official documentation on the assembly of quadcopters. This necessitated the reading of the technical documentation for various parts, in addition to trial and error. We made a goal, that not only would we build a quadcopter from 'scratch', but that we would properly document our experience - in everything from our hardware and our code, to our successes and failures. The goal was to contribute to the online community, and save future quadcopter developers from expending the amount of time and effort we experienced. While not finalized yet, the quadcopter docs are currently running Ruby and Sinatra to parse HTML and Latex from markdown files and render as a website. These technologies were chosen so that the documentation collaboration could happen through markdown files on GitHub.",
 		category : "web",
 		tags : "Ruby, Sinatra, Git, Latex",
 	},
@@ -160,8 +160,8 @@ var content =
 	},
 		"wheat-marketing-center" : {
 		title : "Wheat Marketing Center",
-		description : "Through Texture Technologies Corp, I was introduced to Dr. Gary Hou at the Wheat Marketing Center in Oregon. I worked to film, edit and produce an instructional video of measuring texture firmess. The video was distributed through wheat suppliers and food scientists on the West Coast in order to standardize material testing procedures.",
+		description : "Through Texture Technologies Corp, I was introduced to Dr. Gary Hou at the Wheat Marketing Center in Oregon. I worked to film, edit and produce an instructional video of measuring texture firmness. The video was distributed through wheat suppliers and food scientists on the West Coast in order to standardize material testing procedures.",
 		category : "photography",
-		tags : "",
+		tags : "Video, Training, Premiere Pro",
 	}
 }

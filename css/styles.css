@@ -166,7 +166,7 @@ ul.filter li {
 
 #Grid .gap{
 	display: inline-block;
-	width: 200px;
+	width: 280px;
 }
 .breadcrumbs {
 	margin-bottom: 10px;
@@ -175,9 +175,9 @@ ul.filter li {
 a {
 	color: #f74c31;
 }
-.cf-hidden { 
-	display: none; 
+.cf-hidden {
+	display: none;
 }
 .cf-invisible {
-	visibility: hidden; 
+	visibility: hidden;
 }
