@@ -4,18 +4,20 @@ A simple single page JS app, used to filter portfolio items by category and view
 
 # TODO:
 
-404 page
-Mobile Support via Responsive
-Navigation Breadcrumb
-Titles for Images
-Make tags into category searches
+### Updates:
 
-# Bugs:
+* 404 page
+* Mobile Support via Responsive
+* Navigation Breadcrumb
+* Titles for Images
+* Make tags into category searches
 
-Can 'Back Button' can back out of Lightbox
-Low Resolution Panoramas
-#post/idontexit forces lightbox
-post URL not clearing when returning to category
+### Bugs:
+
+* Can 'Back Button' can back out of Lightbox
+* Low Resolution Panoramas
+* post/idontexit forces lightbox
+* post URL not clearing when returning to category
 
 # Special Thanks
 Special thanks to:
